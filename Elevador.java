@@ -88,11 +88,22 @@ class Elevador{
 				}
 			}
 		}
-		System.out.println("Você está no andar ["+this.andarAtual+"]. Descendo... ");
+		this.andaresSelecionados.clear();
 	}
 	
 	public void desce(){
-		this.andarAtual--;
+		System.out.println("Você está no andar ["+this.andarAtual+"]. Descendo... ");
+		for(int k=this.andaresPermitido.size(); k>=0; k--){
+			
+			for(int i=0; i<this.andaresSelecionados.size(); i++){
+				if(this.andarAtual == (int) this.andaresSelecionados.get(i)){
+					abrePorta();
+				}
+			}
+			
+			this.andarAtual--;
+		}
+		this.andaresSelecionados.clear();
 	}
 
 }

@@ -16,11 +16,18 @@ class TestaElevador{
 			e1.adicionaAndar(j);
 		}*/
 		
+		//Andares subindo
 		e1.adicionaAndar(1);
 		e1.adicionaAndar(3);
 		e1.adicionaAndar(4);
 		
 		e1.sobe();
+		
+		//Andares descendo
+		e1.adicionaAndar(2);
+		e1.adicionaAndar(3);
+		
+		e1.desce();
 
 	}
 	
